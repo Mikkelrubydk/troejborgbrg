@@ -1,0 +1,1019 @@
+/* STANDARD STYLING AF ELEMENTER & NAVIGATION */
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #faf9f6;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Flex'
+  }
+
+  p {
+    font-family: 'montserrat';
+  }
+
+  nav{
+    position: fixed;
+    background: #e0e1db;
+    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.5);
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+    top: 0
+  }
+
+  .logo {
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 20px;
+    filter: drop-shadow(1px 1.5px 0px #000000);
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+  }
+
+  nav ul{
+    float: right;
+    margin-right: 30px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 15px;
+  }
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: 'montserrat', "Helvetica";
+    font-weight: 400;
+    letter-spacing: 1.5px;
+  }
+  li a.active,li a:hover{
+    background: rgba(136, 155, 172, 0.9);
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 40px;
+    color: white;
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    -webkit-text-stroke: .2px black
+  }
+  #check{
+    display: none;
+  }
+
+/* STYLING AF INDEX.HTML BEGYNDER */
+
+  .forside-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .forside-container div {
+    width: 45%;
+  }
+
+  .forside-billede {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 15px;
+  }
+
+  .forside-tekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    z-index: 1;
+    
+  }
+
+  .forside-tekst h1 {
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .forside-tekst p {
+    width: 70%;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+    font-weight: 200;
+    font-family: 'montserrat';
+
+  }
+
+  .dåsepedestal {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .dåsepedestalmobil {
+    display: none;
+  }
+
+  .forsideknap {
+    width: 300px;
+    height: 75px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color:  #fcbf49;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border: none;
+    font-family: 'Roboto Flex';
+    margin-top: 75px;
+    transition: .5s;
+    
+  }
+
+  .forsideknap:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .forsideoverskrift {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 40px;
+    color: #889bac;
+    text-transform: uppercase;
+  }
+  
+  .ølvarianter {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .ølvarianter img {
+    max-width: 100%;
+    width: 350px;
+    filter: drop-shadow(0px 0px 8px white); 
+    transition: .5s ease-in-out;
+  }
+
+  .ølvarianter img:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    filter: drop-shadow(0px 0px 50px white); 
+  }
+
+  .ølbaggrund {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color:rgba(252, 191, 73, 0.8);
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .ølbaggrund figcaption {
+    color: white;
+    position: absolute;
+    font-size: 39px;
+    font-weight: 800;
+    margin-bottom: 340px;
+    font-family: 'montserrat';
+    opacity: 0.4;
+    transition: .5s;
+  }
+
+  .ølbaggrund a:hover + figcaption {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+
+  .bryggeri-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+  }
+
+  .bryggeri-billede {
+    width: 50%;
+
+  }
+
+  .bryggeri-billede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 20px;
+    margin-left: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .bryggeri-tekst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .bryggeri-tekst h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #889bac;
+    text-transform: uppercase;
+  }
+
+  .bryggeri-tekst p {
+    width: 75%;
+    line-height: 40px;
+    font-size: 1.5vw;
+  }
+
+  .bryggeri-tekst .forsideknap {
+    margin-top: 20px;
+  }
+
+  .dåsemockup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -200px;
+  }
+
+  .dåsemockup img {
+    max-width: 100%;
+  width: 700px;
+  z-index: -1;
+  }
+
+  .kontaktforside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kontaktforside h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .kontaktforside p {
+    width: 75%;
+    font-size: 1.5vw;
+    line-height: 40px;
+  }
+
+  .kontaktforside button {
+    margin: 15px 0 50px 0;
+  }
+
+  .footer-container {
+    z-index: 1;
+    display: flex;
+    color: white;
+    font-weight: 400;
+    justify-content: space-evenly;
+    gap: 100px;
+    flex-wrap: wrap;
+    font-family: 'montserrat', 'helvetica';
+    word-spacing: 4px;
+    padding: 60px 60px;
+    width: 100%;
+    background-color: #889bac;
+    box-shadow: 0 -3px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .footermenu {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .footermenu ul li {
+    padding: 10px 0;
+  }
+
+  .footermenu ul li a {
+    color: white;
+  }
+
+  .footermenu h3, .footerkontakt h3, .footerinfo h3 {
+    margin-bottom: 15px;
+  }
+
+  .footerkontakt {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .footerkontakt ul li {
+    padding: 10px 0;
+  }
+
+  .footerkontakt ul li a {
+    color: white;
+  }
+
+  .footerinfo {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .footerinfo h3 {
+    font-family: 'montserrat', sans-serif;
+  }
+
+  .footerinfo p {
+    margin-bottom: 15px;
+  }
+
+  .socials svg {
+    width: 30px;
+    height: 28px;
+    fill: white;
+  }
+
+  .socials svg:hover {
+    transform: scale(1.1);
+  }
+
+
+/* STYLING AF SHOP.HTML BEGYNDER */
+
+  .shopudvalg {
+    display: grid;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .shoptekst {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .shoptekst h1 {
+    margin-bottom: 20px;
+  }
+
+  .shoptekst p {
+    line-height: 40px;
+    font-size: 1.3vw;
+  }
+
+  .shopbillede {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    margin-top: 50px;
+    gap: 40px;
+    
+  }
+
+  .shopbillede img {
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    object-fit: cover;
+    height: 350px;
+    width: 300px;
+    filter: drop-shadow(0px 0px 8px rgba(136, 155, 172, .8)); 
+    transition: 1s;
+  }
+
+  .shopbillede img:hover {
+    transform: scale(1.04);  
+    filter: drop-shadow(0px 0px 50px rgba(136, 155, 172, .8));
+  }
+
+  .shopbaggrund {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+
+
+  .shopbaggrund h3 {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    padding: 10px;
+    color: #000000;
+  }
+
+  .shopbaggrund p {
+    text-align: center;
+    margin: 0 auto;
+    color: #000000;
+  }
+
+  /* STYLING AF BRYGGERIET.HTML BEGYNDER */
+
+  .bryggerietforside img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 45vh;
+    width: 100%;
+  }
+
+  .bryggerihistorie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .bryggerihistorie h1 {
+    width: 80%;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .bryggerihistorie p{
+    width: 80%;
+    font-size: 1.5vw;
+    line-height: 40px;
+  }
+
+  .produktions-container {
+    display: flex;
+  }
+
+  .produktions-billede {
+    width: 50%;
+  }
+
+  .produktions-billede img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-left: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .produktions-tekst {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .produktions-tekst h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #889bac;
+    text-transform: uppercase;
+  }
+
+  .produktions-tekst p {
+    width: 75%;
+    line-height: 40px;
+    font-size: 1.5vw;
+  }
+
+  .besøgos {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .besøgos h2 {
+    margin-bottom: 30px;
+    width: 80%;
+    text-align: left;
+  }
+
+  .besøgos p {
+    width: 80%;
+    font-size: 1.5vw;
+    line-height: 40px;
+  }
+
+  .kort {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .kort iframe{
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    height: 40vh;
+  }
+
+  /* STYLING AF KONTAKT.HTML BEGYNDER */
+
+  .kontaktside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  .kontaktside h1 {
+    margin-bottom: 30px;
+  }
+
+  .kontaktside p {
+    width: 80%;
+    font-size: 1.5vw;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  input[type=text], select, textarea {
+    width: 100%; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: vertical;
+    font-family: 'montserrat';
+    font-size: 1vw;
+  }
+
+  .formular {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    font-family: 'montserrat';
+  }
+
+  .formular label {
+    font-size: 1.5vw;
+    margin-left: 10px;
+  }
+
+  #besked {
+    height: 200px;
+  }
+
+  .formular input {
+    margin-top: 0;
+  }
+
+  /* FÆLLESSTYLING AF RESTERENDE HTML'ER */
+
+  .produkter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .produkt-billede {
+    margin-top: 100px;
+    justify-content: flex-end;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .produkt-tekst {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    font-family: 'montserrat', 'helvetica';
+  }
+
+  .produkt-tekst h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .produkt-tekst h2 {
+    font-size: 25px;
+    font-weight: 300;
+  }
+
+  .produkt-tekst p {
+    width: 70%;
+    line-height: 35px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .produkt-tekst p:first-of-type {
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .produkt-billede img {
+    max-width: 100%;
+    width: 75vh;
+    filter: drop-shadow(5px 5px 20px lightgrey);
+    animation: 1.2s ease-in-out slideInLeft, 1s ease-in-out tilt-shaking 1.2s;
+  
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .tilbageknap {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    left: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #889bac;
+    color: white;
+    font-family: 'montserrat', 'helvetica';
+    font-weight: 600;
+    transition: .5s;
+    border: none;
+  }
+
+  .tilbageknap:hover {
+    transform: scale(1.05);
+  }
+
+  .fa-angle-left {
+    margin-right: 10px;
+    font-size: 25px;
+  }
+
+  .plakatbillede img {
+    max-width: 100%;
+    width: 50%;
+    margin-right: 50px;
+  }
+
+  .drikkedunk img {
+    max-width: 100%;
+    width: 800px;
+    margin-right: -200px;
+  }
+
+
+
+  /* TABLET BREAKPOINT */
+  @media (max-width: 1080px){
+    nav ul li a{
+      font-size: 14px;
+    }
+
+    .logo{
+        width: 250px;
+        margin-left: 50px;
+        margin-top: 25px;
+  }
+
+  .forside-tekst h1 {
+    font-size: 3em;
+  }
+
+
+  .forside-tekst p {
+    font-size: 1.5em;
+  }
+
+  .bryggeri-tekst h2 {
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+}
+
+/* MOBILE BREAKPOINT */
+  @media (max-width: 920px){
+    .checkbtn{
+      display: block;
+    }
+    
+    nav ul {
+        margin-right: 0;
+    }
+    
+    .menupunkter{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: rgba(136, 155, 172, 1);
+      top: 100px;
+      right: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: flex;
+      justify-content: center;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: white;
+    }
+    #check:checked ~ ul{
+      right: 0;
+    }
+
+    .checkbtn {
+        margin-right: 25px;
+    }
+
+    .logo {
+        display: flex;
+        margin: 0 auto;
+        width: 250px;
+        margin-top: 25px;
+    }
+
+    .forside-container {
+        justify-content: center;
+    }
+
+    .forside-container div {
+        display: none;
+    }
+
+    .dåsepedestal {
+        width: 100%;
+        display: none;
+      }
+    
+    .dåsepedestalmobil {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .forside-billede {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .forside-tekst {
+        margin-top: 100px;
+        width: 90%;
+        height: 80vh;
+        justify-content: space-between;
+      }
+
+      .forside-tekst h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+
+      .forside-tekst p {
+        display: none;
+      }
+
+      .forsideknap {
+        margin: 0;
+        font-size: 20x;
+        border: 2px solid white;
+        height: 75px;
+        width: 250px;
+      }
+
+      .bryggeri-container {
+        flex-direction: column;
+      }
+
+      .bryggeri-billede {
+        width: 100%;
+      }
+
+      .bryggeri-tekst {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 100%;
+      }
+
+      .bryggeri-tekst h2 {
+        margin-top: 10px;
+        font-size: 35px;
+        width: 75%;
+        text-align: left;
+      }
+
+      .bryggeri-tekst p{
+        font-size: 18px;
+      }
+
+      .bryggeri-billede img {
+        border-radius: 0px;
+        height: 200px;
+        margin: 0;
+        object-fit: cover;
+      }
+
+      .footer-container {
+        justify-content: flex-start;
+      }
+
+      .kontaktforside p {
+        font-size: 18px;
+      }
+
+      .kontaktforside h2 {
+        margin-top: 0;
+        text-align: left;
+        font-size: 40px;
+        width: 75%;
+      }
+
+      .dåsemockup {
+        margin-bottom: -120px;
+      }
+
+      .dåsemockup img {
+        width: 500px;
+        max-width: 100%;
+        z-index: -1;
+        }
+
+        .shoptekst h1 {
+          text-align: left;
+        }
+
+        .shoptekst p {
+          font-size: 18px;
+        }
+
+        .produktions-container {
+          flex-direction: column;
+        }
+  
+        .produktions-billede {
+          width: 100%;
+        }
+  
+        .produktions-tekst {
+          margin: 0 auto;
+          width: 100%;
+        }
+  
+        .produktions-tekst h2 {
+          width: 80%;
+          margin-top: 40px;
+          font-size: 40px;
+          text-align: left;
+        }
+  
+        .produktions-tekst p{
+          font-size: 18px;
+          width: 80%;
+        }
+  
+        .produktions-billede img {
+          border-radius: 0px;
+          height: 250px;
+          margin: 0;
+          object-fit: cover;
+        }
+
+        .bryggerihistorie h1 {
+          text-align: left;
+          font-size: 40px;
+        }
+
+        .bryggerihistorie p {
+          font-size: 18px;
+        }
+
+        .besøgos h2 {
+          margin-bottom: 30px;
+          font-size: 40px;
+          text-align: left;
+        }
+      
+        .besøgos p {
+          font-size: 18px;
+        }
+
+        .kort iframe{
+          width: 100%;
+          height: 50vh;
+        }
+
+        .kontaktside h1 {
+          text-align: left;
+          width: 80%;
+          font-size: 30px;
+        }
+
+        .kontaktside p {
+          font-size: 18px;
+          text-align: left;
+        }
+
+        input[type=text], select, textarea {
+          font-size: 18px;
+        }
+    
+        .formular label {
+          font-size: 20px;
+        }
+
+        .formular input {
+          display: flex;
+          margin: 0 auto;
+          justify-content: center;
+        }
+
+        .produkter {
+          flex-direction: column;
+          margin: 100px 0 100px 0;
+          height: auto;
+        }
+        
+        .produkt-billede {
+          width: 100%;
+          justify-content: center;
+          height: auto;
+        }
+
+        .produkt-billede img {
+          max-width: 100%;
+        }
+
+        .produkt-tekst {
+          align-items: center;
+          text-align: center;
+          width: 100%;
+          margin-top: 20px
+        }
+
+        .produkt-tekst p:nth-last-of-type(1) {
+          text-align: left;
+        }
+
+        .tilbageknap {
+          top: 130px;
+          left: 30px;
+  }
+  }
